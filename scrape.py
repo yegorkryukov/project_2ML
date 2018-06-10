@@ -53,9 +53,12 @@ class Scrape():
 
         # get html
         with requests.get(url) as response:
-            html = response.text
+            #print(response)
+            if response.ok:
+                html = response.text
+            else:
+                return False
      
-
         # define dict to insert into db
         data = {
             "url": url, 
@@ -77,7 +80,7 @@ class Scrape():
         # crawl through soup object, find links, add to set object
         links = set()
         for link in soup.findAll('a'):
-            links.add(startURL + link.get('href'))
+            links.add(urllib.parse.urljoin(startURL, link.get('href')))
 
         return links
 
