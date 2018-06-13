@@ -10,12 +10,19 @@ class Scrape():
     def scrapeHTML(url, htmlCollection, done_urls):
 
         # get html
-        with requests.get(url) as response:
-            #print(response)
-            if response.ok:
-                html = response.text
-            else:
-                return False
+        try:   
+            with requests.get(url) as response:
+                #print(response)
+                if response.ok:
+                    html = response.text
+                else:
+                    return False
+        except Exception as e:
+            print(f'Error: {e}')
+        else:
+            pass
+            
+
      
         # define dict to insert into db
         data = {
