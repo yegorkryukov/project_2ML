@@ -7,38 +7,29 @@ from pprint import pprint
 
 class Scrape():
  
-    def scrapeHTML(url, htmlCollection, done_urls):
+    def scrapeHTML(url):
 
-        # get html
-        with requests.get(url) as response:
-            #print(response)
-            if response.ok:
-                html = response.text
-            else:
-                return False
-     
-        # define dict to insert into db
-        data = {
-            "url": url, 
-            "html": html, 
-            }
+        # get url
+        try:   
+            response = requests.get(url)
+        except Exception as e:
+            print(f'ScrapeHTML: {e}')
 
-        # insert dict into db document
-        htmlCollection.insert_one(data)
+            # return false for scrapeURL check in parent app
+            return False
 
-        # record url in "done" collection
-        done_urls.add(url)
-
-        return html
+        return response.text
     
     def scrapeURL(html, startURL):
         # create soup object to parse
         soup = bs(html, 'lxml')
 
+
+
         # crawl through soup object, find links, add to set object
         links = set()
         for link in soup.findAll('a'):
-            links.add(urllib.parse.urljoin(startURL, link.get('href')))
+            links.add(urllib.parse.urljoin(startURL, link.get('href')), scheme=['http', 'https'])
 
         return links
 
