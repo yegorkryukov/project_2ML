@@ -29,7 +29,10 @@ class Scrape():
         # crawl through soup object, find links, add to set object
         links = set()
         for link in soup.findAll('a'):
-            links.add(urllib.parse.urljoin(startURL, link.get('href')), scheme=['http', 'https'])
+            if 'http' in startURL:
+                links.add(urllib.parse.urljoin(startURL, link.get('href')))
+            else:
+                continue
 
         return links
 
