@@ -1,0 +1,23 @@
+Left:
+1. New Republic - V
+2. Huffington Post - V
+3. Mother Jones - V
+4. The Intercept - V
+5. Daily Beast - V
+6. MSNBC - Y
+7. The Washington Post - Y
+8. Politico - Y
+9. The Guardian - Y
+10. BBC - Y
+
+Right:
+1. Breitbart -S
+2. Fox News - S
+3. New York Post - S
+4. The American Conservative - S
+5. The Washington Times - S
+6. National Review - M
+7. The Weekly Standard - M
+8. The Hill - M
+9. The Economist - M
+10. The Wall Street Journal - M
