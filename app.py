@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, render_template
-
-#create a session
-session = Session(engine)
+import json
+import pprint
 
 #make an app instance
 app = Flask(__name__)
@@ -12,18 +11,29 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
-
-#word cloud
-@app.route('/word-cloud/<news_org>')
-def cloud(news_org=None)
-    return 
+    #return (
+    #    f"<h1>Chord Diagram</h1><br/><br/>"
+    #    f"Available Routes:<br/>"
+    #    """<a href="/chord">Chord Diagram</a><br/>"""        
+    #)
 
 #chord diagram
 @app.route('/chord')
+def chord():
 
-#box plot
-@app.route('/box')
-  
+    with open('static/data/chorddata.json') as filename:
+        chorddata = json.load(filename)
+
+    return (jsonify(chorddata))   
+
+#boxplot
+@app.route('/boxplot')
+def boxplot():
+
+    with open('static/data/boxdata.json') as filename:
+        boxdata = json.load(filename)
+
+    return (jsonify(boxdata)) 
 
 #run the app
 if __name__ == '__main__':
