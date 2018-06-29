@@ -24,7 +24,7 @@
   <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
-  <link href="{{ url_for('static', filename='css/grayscale.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/grayscale.css') }}" rel="stylesheet">
 
 </head>
 
@@ -40,11 +40,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown ">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Visuals
             </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu gray-bg" aria-labelledby="navbarDropdown">
             <a class="dropdown-item js-scroll-trigger" href="#wordcloud">Word Clouds</a>
             <a class="dropdown-item js-scroll-trigger" href="#chord">Chord</a>
             <a class="dropdown-item js-scroll-trigger" href="#boxplot">Boxplot</a>
@@ -99,20 +99,36 @@
   <section id='wordcloud' class='content-section'>
     <div class="container-fluid">
       <div class="row">
-        <!-- <div class="container"><h2>Wordclouds</h2></div> -->
-        <div class="form-group col">
-          <select class="form-control" id="first-cloud" onchange="firstOptionChanged(this.value)"></select>
-        </div>
-        <div class="form-group col">
-          <select class="custom-select col" id="second-cloud" onchange="secondOptionChanged(this.value)"></select>
-        </div>        
-      </div>
-      <div class="row">
-        <div class="col text-center">
-          <figure class="figure col" id="first-image"></figure>
-        </div>
-        <div class="col text-center">
-          <figure class="figure col" id="second-image"></figure>
+        <div class="col-sm-12">
+          <h2 class="text-center">Wordcloud</h2>
+          <div class="row">
+            <div class="container col-lg-6 col-md-8 col-sm-12">
+              <img class="figure-img rounded img-big" src="{{ url_for('static', filename='img/AllCombined.png')}}">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+              <form>
+                <div class="form-group">
+                  <select class="form-control" id="first-cloud" onchange="firstOptionChanged(this.value)"></select>
+                </div>
+                <div class="form-group text-center">
+                  <figure class="figure" id="first-image"></figure>
+                </div>
+              </form>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6">
+              <form>
+                <div class="form-group">
+                  <select class="form-control" id="second-cloud" onchange="secondOptionChanged(this.value)"></select>
+                </div>
+                <div class="form-group text-center">
+                  <figure class="figure" id="second-image"></figure>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -141,7 +157,7 @@
       <div class="row">
           <div class="col-lg-8">
               <figure class='figure'>
-                <div id="leftDiv"></div>
+                <div class="img-big"id="leftDiv"></div>
                 <figcaption class="figure-caption">Left-leaning websites.</figcaption>
               </figure>
             </div>
