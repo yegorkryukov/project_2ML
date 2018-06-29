@@ -58,11 +58,11 @@ function secondOptionChanged(news_org) {
 function showWordCloud(news_org, side) {
   let url = `/static/img/${news_org}`;
   if (side === 'first') {
-    let firstImage = document.querySelector('.first-image');
-    firstImage.innerHTML = '<img src=' + url + '>';
+    let firstImage = document.querySelector('#first-image');
+    firstImage.innerHTML = '<img class="figure-img rounded" src=' + url + '>';
   } else if (side === 'second') {
-    let secondImage = document.querySelector('.second-image');
-    secondImage.innerHTML = '<img src=' + url + '>';
+    let secondImage = document.querySelector('#second-image');
+    secondImage.innerHTML = '<img class="figure-img rounded" src=' + url + '>';
   }
   //console.log(url);
 }

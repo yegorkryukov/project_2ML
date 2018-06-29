@@ -96,22 +96,24 @@
   </section>
 
   <!-- Plots Section -->
-
   <section id='wordcloud' class='content-section'>
     <div class="container-fluid">
       <div class="row">
         <!-- <div class="container"><h2>Wordclouds</h2></div> -->
         <div class="form-group col">
-            <select class="form-control" id="first-cloud" onchange="firstOptionChanged(this.value)"></select>
+          <select class="form-control" id="first-cloud" onchange="firstOptionChanged(this.value)"></select>
         </div>
         <div class="form-group col">
           <select class="custom-select col" id="second-cloud" onchange="secondOptionChanged(this.value)"></select>
         </div>        
       </div>
       <div class="row">
-        <figure class="first-image figure col-md-6"></figure>
-        <div class="second-image col-md-6"></div>
-        <!-- </div> -->
+        <div class="col text-center">
+          <figure class="figure col" id="first-image"></figure>
+        </div>
+        <div class="col text-center">
+          <figure class="figure col" id="second-image"></figure>
+        </div>
       </div>
     </div>
   </section>
