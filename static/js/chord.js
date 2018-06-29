@@ -30,7 +30,6 @@ Plotly.d3.json("/chord", function(error, response) {
   const myConfig = {
     "type": "chord",
     "sort-objects": false,
-    // "plotarea": { "margin": "1px 1px 1px 1px" }, 
     "options": {
       "angle-padding": 1,
       "band-width": 10,
@@ -67,9 +66,8 @@ Plotly.d3.json("/chord", function(error, response) {
         "label": {
           "bold": true,
           "font-size": "10px",
-          "font-family": "Open Sans",
+          "font-family": "arial",
           "angle": 90,
-          // "padding": "2px"
         }
       }
     },

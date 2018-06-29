@@ -1,6 +1,7 @@
-from flask import Flask, jsonify, render_template
+from flask import (Flask, jsonify, render_template, 
+                   send_file, url_for)
 import json
-import pprint
+
 
 #make an app instance
 app = Flask(__name__)
@@ -11,11 +12,11 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
-    #return (
-    #    f"<h1>Chord Diagram</h1><br/><br/>"
-    #    f"Available Routes:<br/>"
-    #    """<a href="/chord">Chord Diagram</a><br/>"""        
-    #)
+
+#word cloud
+@app.route('/view/<word_cloud>')
+def cloud(word_cloud):
+    return send_file(f"static/img/{word_cloud}")
 
 #chord diagram
 @app.route('/chord')
