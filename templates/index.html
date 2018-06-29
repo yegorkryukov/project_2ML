@@ -101,8 +101,12 @@
     <div class="container-fluid">
       <div class="row">
         <!-- <div class="container"><h2>Wordclouds</h2></div> -->
-        <select class="custom-select col" id="first-cloud" onchange="firstOptionChanged(this.value)"></select>
-        <select class="custom-select col" id="second-cloud" onchange="secondOptionChanged(this.value)"></select>
+        <div class="form-group col">
+            <select class="form-control" id="first-cloud" onchange="firstOptionChanged(this.value)"></select>
+        </div>
+        <div class="form-group col">
+          <select class="custom-select col" id="second-cloud" onchange="secondOptionChanged(this.value)"></select>
+        </div>        
       </div>
       <div class="row">
         <figure class="first-image figure col-md-6"></figure>

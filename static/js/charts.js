@@ -36,8 +36,10 @@ function cloudNameSelect() {
     let secondOption = document.createElement('option');
     firstOption.text = labels[i];
     firstOption.value = png_name[i];
+    firstOption.className = 'form-control';
     secondOption.text = labels[i];
     secondOption.value = png_name[i];
+    secondOption.className = 'form-control';
     firstCloud.appendChild(firstOption);
     secondCloud.appendChild(secondOption);
   }
