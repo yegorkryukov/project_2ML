@@ -95,7 +95,7 @@ Plotly.d3.json("/boxplot", function(error, response) {
   var trace10 = {
     y: y10,
     type: 'box',
-    name: 'The American Conservative',
+    name: 'American Conservative',
     marker: {color: "#800517"}
   };
 
