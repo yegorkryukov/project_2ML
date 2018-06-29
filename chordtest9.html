@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <script>
+    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+
+<body>
+  <div id='myChart'><a class="zc-ref" href="https://www.zingchart.com/">Charts by ZingChart</a></div>
+  <script src="data.js" type="text/javascript"></script>
+  <script>
+
+    const chords = dataSet;
+
+    const titles = ['New Republic', 'Mother Jones', 'Slate', 'Intercept', 'Daily Beast', 'Atlantic', 'Wash Post', 'Politico', 'Guardian', 'BBC', 'Breitbart', 'Fox News', 'NY Post', 'American Cons', 'Wash Times', 'Daily Wire', 'Reason', 'Hill', 'TFT', 'OANN'];
+    let seriesList = [];
+    let chordObj = {};
+    for (let i = 0; i < titles.length; i++) {
+      chordObj['text'] = titles[i];
+      chordObj['values'] = chords[i];
+      seriesList.push(chordObj);
+      chordObj = {};
+    }
+    
+    const myConfig = {
+      "type": "chord",
+      "sort-objects": false,
+      // <!-- "plotarea": {  -->
+      //   <!-- "margin": "1px 1px 1px 1px"  -->
+      // <!-- }, -->
+      "options": {
+        "angle-padding": 1,
+        "band-width": 10,
+        "band-space": 1,
+        "radius": 300,
+        "color-type": "palette",
+        "palette": [
+          "#1F45FC",
+          "#2B60DE",
+          "#151B8D",
+          "#151B54",
+          "#2B547E",
+          "#737CA1",
+          "#3090C7",
+          "#5CB3FF",
+          "#A0CFEC",
+          "#C2DFFF",
+          "#800517",
+          "#9F000F",
+          "#C24641",
+          "#E41B17",
+          "#CA226B",
+          "#F75D59",
+          "#E77471",
+          "#FBBBB9",
+          "#E56E94",
+          "#FAAFBE"
+        ],
+        "style": {
+          "chord": {
+            "border-width": 0            
+          },
+          "band": {
+            "border-width": 0
+          },
+          "tick": {
+            "visible": false
+          },
+          "item": {
+            "visible": false
+          },
+          "label": {
+            "bold": true,
+            "font-size": "10px",
+            "font-family": "Open Sans",
+            "angle": 90,
+            // <!-- "padding": "2px" -->
+          }
+
+        }
+      },
+      "tooltip": {
+
+      },
+
+
+
+      "series": seriesList
+    };
+
+
+    zingchart.render({
+      id: 'myChart',
+      data: myConfig,
+      height: 1000, 
+      width: 1000 
+    });
+
+  </script>
+</body>
+
+</html>
