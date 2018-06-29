@@ -4,7 +4,32 @@ function cloudNameSelect() {
   const firstCloud = document.querySelector('#first-cloud');
   const secondCloud = document.querySelector('#second-cloud');
   const labels = ['ALL News Orgs', '-----------', 'All Right News', 'The American Conservative', 'Breitbart', 'Daily Wire', 'The Fiscal Times', 'Fox News', 'The Hill', 'NY Post', 'OANN', 'Reason', 'Washington Times', '-----------', 'All Left News', 'The Atlantic', 'BBC', 'Daily Beast', 'The Guardian', 'Intercept', 'Mother Jones', 'New Republic', 'Politico', 'Slate', 'Washington Post'];
-  const png_name = ['AllCombined.png', '', 'R-All.png', 'R-AmericanConservative.png', 'R-Breitbart.png', 'R-DailyWire.png', 'R-TFT.png', 'R-FoxNews.png', 'R-Hill.png', 'R-NYPost.png', 'R-OANN.png', 'R-Reason.png', 'R-WashingtonTimes.png', '', 'L-All.png', 'L-Atlantic.png', 'L-BBC.png', 'L-DailyBeast.png', 'L-Guardian.png', 'L-Intercept.png', 'L-MotherJones.png', 'L-NewRepublic.png', 'L-Politico.png', 'L-Slate.png', 'L-WashingtonPost.png'];
+  const png_name = [
+    'AllCombined.png', 
+    '', 
+    'R-All.png', 
+    'R-AmericanConservative.png', 
+    'R-Breitbart.png', 
+    'R-DailyWire.png', 
+    'R-TFT.png', 
+    'R-FoxNews.png', 
+    'R-Hill.png', 
+    'R-NYPost.png', 
+    'R-OANN.png', 
+    'R-Reason.png', 
+    'R-WashingtonTimes.png', 
+    '', 
+    'L-All.png', 
+    'L-Atlantic.png', 
+    'L-BBC.png', 
+    'L-DailyBeast.png', 
+    'L-Guardian.png', 
+    'L-Intercept.png', 
+    'L-MotherJones.png', 
+    'L-NewRepublic.png', 
+    'L-Politico.png', 
+    'L-Slate.png', 
+    'L-WashingtonPost.png'];
   
   for (let i = 0; i < labels.length; i++) {
     let firstOption = document.createElement('option');
@@ -29,7 +54,7 @@ function secondOptionChanged(news_org) {
 
 //get the word cloud image
 function showWordCloud(news_org, side) {
-  let url = `/view/${news_org}`;
+  let url = `/static/img/${news_org}`;
   if (side === 'first') {
     let firstImage = document.querySelector('.first-image');
     firstImage.innerHTML = '<img src=' + url + '>';
@@ -38,7 +63,6 @@ function showWordCloud(news_org, side) {
     secondImage.innerHTML = '<img src=' + url + '>';
   }
   //console.log(url);
-   
 }
 
 cloudNameSelect();

@@ -45,9 +45,9 @@
             Visuals
             </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item js-scroll-trigger" href="#plot1">Chord</a>
-            <a class="dropdown-item js-scroll-trigger" href="#plot2">Word Clouds</a>
-            <a class="dropdown-item js-scroll-trigger" href="#plot3">Boxplot</a>
+            <a class="dropdown-item js-scroll-trigger" href="#wordcloud">Word Clouds</a>
+            <a class="dropdown-item js-scroll-trigger" href="#chord">Chord</a>
+            <a class="dropdown-item js-scroll-trigger" href="#boxplot">Boxplot</a>
           </div>
           </li>
           <li class="nav-item">
@@ -96,29 +96,65 @@
   </section>
 
   <!-- Plots Section -->
-  <section id="plots" class="content-section">
-    <div class="container">
+
+  <section id='wordcloud' class='content-section'>
+    <div class="container-fluid">
       <div class="row">
-        
-          <div class="col-lg-4">
-            <h2>Chord</h2>
-            <p>Description here</p>
-          </div>
-       
-          <div class="col-lg-8">
-            <figure class='figure'>
-              <div id='chordChart'></div>
-              <figcaption class="figure-caption">Links to each other.</figcaption>
-            </figure>
-          </div>
-        
+        <!-- <div class="container"><h2>Wordclouds</h2></div> -->
+        <select class="custom-select col" id="first-cloud" onchange="firstOptionChanged(this.value)"></select>
+        <select class="custom-select col" id="second-cloud" onchange="secondOptionChanged(this.value)"></select>
+      </div>
+      <div class="row">
+        <figure class="first-image figure col-md-6"></figure>
+        <div class="second-image col-md-6"></div>
+        <!-- </div> -->
       </div>
     </div>
-    
   </section>
 
-  <div id="leftDiv"></div>
-  <div id="rightDiv"></div>
+
+  <section id="chord" class="content-section">
+    <div class="container">
+      <div class="row">        
+        <div class="col-lg-4">
+          <h2>Chord</h2>
+          <p>Description here</p>
+        </div>      
+        <div class="col-lg-8">
+          <figure class='figure'>
+            <div id='chordChart'></div>
+            <figcaption class="figure-caption">Links to each other.</figcaption>
+          </figure>
+        </div>      
+      </div>
+    </div>
+  </section>
+
+  <section id="boxplot" class="content-section">
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-8">
+              <figure class='figure'>
+                <div id="leftDiv"></div>
+                <figcaption class="figure-caption">Left-leaning websites.</figcaption>
+              </figure>
+            </div>
+          <div class="col-lg-4">
+            <h2>Boxplots</h2>
+            <p>Description here</p>
+          </div>
+      </div>
+      <div class="row">
+          <figure class='figure'>
+            <div id="rightDiv"></div>
+            <figcaption class="figure-caption">Right-leaning websites.</figcaption>
+          </figure>
+      </div>
+    </div>
+  </section>
+
+  
+  
   
   
   <!-- Plotly library -->
@@ -141,6 +177,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
   <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
 
   <!-- Plugin JavaScript -->
   <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
