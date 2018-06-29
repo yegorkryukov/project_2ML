@@ -8,7 +8,7 @@
   <meta name="author" content="Group of concerned citizens">
   <title>PuddleNet: the story of (not)talking</title>
 
-  <!-- Script for boxplot chart -->
+  <!-- Script for chord chart -->
   <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
   <script>
     zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
@@ -90,13 +90,16 @@
           <h2>About PuddleNet</h2>
           <p>Our project will scrape 10 right-leaning and 10 left-leaning news sites to feed the content into a machine learning algorithm.  We hope to teach the machine through unsupervised, deep learning, and natural language processing to determine if a body of text is right or left leaning.  </p>
           <p>Furthermore, as we create dimensions of data and extract features like date/time, title, text, authors, and keywords, we can begin to explore the data in new ways.  For example, we can see if a topic tended to have the right and left meet more in the middle, or if it made them polar opposites.  Viewing the same data, we can see if certain events led to bi-partisan alignment or if dates have an impact in general.</p>
+          <a href="#wordcloud" class="btn btn-circle js-scroll-trigger">
+            <i class="fa fa-angle-double-down animated"></i>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Plots Section -->
-  <section id='wordcloud' class='content-section'>
+  <section id='wordcloud' class='white-section'>
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
@@ -106,7 +109,11 @@
               <img class="figure-img rounded img-big" src="{{ url_for('static', filename='img/AllCombined.png')}}">
             </div>
           </div>
-          
+          <div class="row">
+            <div class="container col-lg-6 col-md-8 col-sm-12">
+              <p>Description here</p>
+            </div>
+          </div>          
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-6">
               <form>
@@ -128,14 +135,18 @@
                 </div>
               </form>
             </div>
-          </div>
-        </div>
-      </div>
+          </div>          
+        </div>        
+      </div>      
+    </div>
+    <div class="container text-center">
+      <a href="#chord" class="btn btn-circle-inv js-scroll-trigger">
+        <i class="fa fa-angle-double-down animated"></i>
+      </a>
     </div>
   </section>
 
-
-  <section id="chord" class="content-section">
+  <section id="chord" class="white-section">
     <div class="container">
       <div class="row">        
         <div class="col-lg-4">
@@ -150,29 +161,36 @@
         </div>      
       </div>
     </div>
+    <div class="container text-center">
+      <a href="#boxplot" class="btn btn-circle-inv js-scroll-trigger">
+        <i class="fa fa-angle-double-down animated"></i>
+      </a>
+    </div>
   </section>
 
-  <section id="boxplot" class="content-section">
-    <div class="container">
-      <div class="row">
-          <div class="col-lg-8">
-              <figure class='figure'>
-                <div class="img-big"id="leftDiv"></div>
-                <figcaption class="figure-caption">Left-leaning websites.</figcaption>
-              </figure>
-            </div>
-          <div class="col-lg-4">
+  <section id="boxplot" class="white-section">
+      <div class="container-fluid">
+          <div class="col-sm-12 text-center">
             <h2>Boxplots</h2>
             <p>Description here</p>
           </div>
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="container col-sm-12 col-md-12 col-lg-12">
+                <h3 class="text-center pt-5 pb-0">Left-leaning Media</h3>
+                <div class="svg-container pt-0" id="leftDiv"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="container col-sm-12 col-md-12 col-lg-12">
+                <h3 class="text-center pt-5 pb-0">Right-leaning Media</h3>
+                <div class="svg-container pt-0" id="rightDiv"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row">
-          <figure class='figure'>
-            <div id="rightDiv"></div>
-            <figcaption class="figure-caption">Right-leaning websites.</figcaption>
-          </figure>
-      </div>
-    </div>
   </section>
 
   
@@ -185,9 +203,10 @@
   <!-- Custom plots -->
   <script src="{{ url_for('static', filename='js/boxplot.js') }}"></script>
   <script src="{{ url_for('static', filename='js/chord.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
 
-  <!-- Map Section -->
-  <div id="map"></div>
+  <!-- Map Section
+  <div id="map"></div> -->
 
   <!-- Footer -->
   <footer>
@@ -199,8 +218,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
   <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
-
+  
   <!-- Plugin JavaScript -->
   <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
 

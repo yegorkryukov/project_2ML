@@ -173,7 +173,7 @@ Plotly.d3.json("/boxplot", function(error, response) {
     //title: '',
     yaxis: {
       title: 'Words per Article',
-      range: [0,2500],
+      range: [0,5000],
       showgrid: true,
       zeroline: true,
       //dtick: 5,
@@ -188,17 +188,17 @@ Plotly.d3.json("/boxplot", function(error, response) {
       b: 80,
       t: 100
     },
-    paper_bgcolor: 'rgb(243, 243, 243)',
-    plot_bgcolor: 'rgb(243, 243, 243)'
+    paper_bgcolor: 'white',
+    plot_bgcolor: 'white'
   };
 
   Plotly.newPlot('leftDiv', leftData, layout);
 
   layout = {
-    //title: '',
+    // title: 'Left-leaning media',
     yaxis: {
       title: 'Words per Article',
-      range: [0,2500],
+      range: [0,5000],
       showgrid: true,
       zeroline: true,
       //dtick: 5,
@@ -213,8 +213,8 @@ Plotly.d3.json("/boxplot", function(error, response) {
       b: 80,
       t: 100
     },
-    paper_bgcolor: 'rgb(243, 243, 243)',
-    plot_bgcolor: 'rgb(243, 243, 243)'
+    paper_bgcolor: 'white',
+    plot_bgcolor: 'white'
   };
 
   Plotly.newPlot('rightDiv', rightData, layout);
