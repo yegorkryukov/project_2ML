@@ -31,7 +31,7 @@
 <body id="page-top">
   
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">PuddleNet</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,9 +57,6 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#team">Team</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -70,7 +67,7 @@
     <div class="intro-body">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col-lg-6 mx-auto">
             <h1 class="brand-heading">You first.</h1>
             <p class="intro-text">Have you ever wonder why Democrats and Republicans have so polirazed views on pretty much every aspect of social life? Do they even talk to each other?  That's what we are about to find out.
               <br>Created by Captain Bouncy, the Rodneys, Boss & Co.</p>
@@ -78,6 +75,9 @@
               <i class="fa fa-angle-double-down animated"></i>
             </a>
           </div>
+          <!-- <div class="col-lg-6 mx-auto">
+            <img src="http://media.nj.com/hudson_voices_impact/photo/firstjpg-e58a5d80f7e01bfc.jpg">
+          </div> -->
         </div>
       </div>
     </div>
@@ -194,12 +194,12 @@
       </div>
   </section>
 
-  <section class="masthead" id="textEnter">
+  <section class="content-section" id="textEnter">
     <div class="intro-body">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h1 class="brand-heading">Coming soon..</h1>
+            <h1 class="brand-heading text-center">Coming soon..</h1>
             <p class="intro-text">Do you know where the media you read is leaning: left or right? Are you sure? Copypaste text below to find out.</p>
             <form>
               <div class="form-group">
@@ -207,16 +207,72 @@
               </div>
               <button type="submit" class="btn btn-primary mb-2">Find out</button>
             </form>
-            <a href="#top" class="btn btn-circle js-scroll-trigger">
-              <i class="fa fa-angle-double-up animated"></i>
-            </a>
+            <div class="text-center">
+              <a href="#team" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+            </div>            
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  
+  <section id="team" class="white-section">
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card w-100" style="width: 18rem;">
+              <img class="card-img-top" src="https://avatars0.githubusercontent.com/u/26147020?s=400&v=4" alt="Vanessa">
+              <div class="card-body">
+                <h5 class="card-title">Captain Bouncy</h5>
+                <p class="text-muted">aka Vanessa Van Gilder</p>
+                <p class="card-text">Lead Infringement Specialist at Funimation (A Sony Pictures Television Company)</p>
+                <a href="https://github.com/VanessaVanG" class="btn btn-primary" target="_blank"><i class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card w-100" style="width: 18rem;">
+              <img class="card-img-top" src="https://avatars3.githubusercontent.com/u/35657984?s=400&v=4" alt="Spencer">
+              <div class="card-body">
+                <h5 class="card-title">The Rodneys</h5>
+                <p class="text-muted pt-0">aka Spence Rand</p>
+                <p class="card-text">Asset Management Associate at Monument Wealth Management<br> <br> </p>
+                <a href="https://github.com/spencerrand" class="btn btn-primary" target="_blank"><i class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card w-100" style="width: 18rem;">
+              <img class="card-img-top" src="https://avatars2.githubusercontent.com/u/10793093?s=400&v=4" alt="Mike">
+              <div class="card-body">
+                <h5 class="card-title">Boss</h5>
+                <p class="text-muted pt-0">aka Mike Hager</p>
+                <p class="card-text">Manager at Deloitte Consulting<br> <br> <br> </p> 
+                <a href="https://github.com/mhager3" class="btn btn-primary" target="_blank"><i class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card w-100" style="width: 18rem;">
+              <img class="card-img-top" src="https://avatars1.githubusercontent.com/u/34144679?s=400&v=4" alt="Yegor">
+              <div class="card-body">
+                <h5 class="card-title">Co</h5>
+                <p class="text-muted pt-0">aka Yegor Kryukov</p>
+                <p class="card-text">E-commerce and data-oriented entrepreneur<br> <br> </p>
+                <a href="https://github.com/yegorkryukov" class="btn btn-primary" target="_blank"><i class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center container pt-5">
+            <a href="#page-top" class="btn btn-circle-inv js-scroll-trigger">
+              <i class="fa fa-angle-double-up animated"></i>
+            </a>
+          </div>
+    </div>
+</section>
   
   
   
@@ -249,7 +305,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2vE0o9iazl4YrCqQFhunxphsd9ICq6eM&sensor=false"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="{{ url_for('static', filename='js/grayscale.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/grayscale.js') }}"></script>
 
 </body>
 

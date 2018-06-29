@@ -84,14 +84,14 @@ a:focus, a:hover {
 }
 
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 80%);
+  color: fade(black, 80%);
   outline: none;
-  background-color: transparent;
+  background-color: black;
 }
 
 #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
   outline: none;
-  background-color: transparent;
+  background-color: black;
 }
 
 @media (min-width: 992px) {
@@ -127,7 +127,10 @@ a:focus, a:hover {
   padding: 200px 0;
   text-align: center;
   color: white;
-  /* background: url("../img/intro-bg.jpg") no-repeat bottom center scroll; */
+  background: linear-gradient(
+     rgba(0, 0, 0, 0.7), 
+     rgba(0, 0, 0, 0.7) ),
+      url("http://media.nj.com/hudson_voices_impact/photo/firstjpg-e58a5d80f7e01bfc.jpg") no-repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -183,8 +186,8 @@ a:focus, a:hover {
 }
 
 .content-section {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .download-section {
