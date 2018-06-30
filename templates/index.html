@@ -9,7 +9,7 @@
   <title>PuddleNet: the story of (not)talking</title>
 
   <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
-  
+
   <!-- Script for chord chart -->
   <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
   <script>
@@ -31,27 +31,29 @@
 </head>
 
 <body id="page-top">
-  
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">PuddleNet</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Visuals
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Visuals
             </a>
-          <div class="dropdown-menu gray-bg" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item js-scroll-trigger" href="#wordcloud">Word Clouds</a>
-            <a class="dropdown-item js-scroll-trigger" href="#chord">Chord</a>
-            <a class="dropdown-item js-scroll-trigger" href="#boxplot">Boxplot</a>
-            <a class="dropdown-item js-scroll-trigger" href="#textEnter">Check your source</a>            
-          </div>
+            <div class="dropdown-menu gray-bg" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item js-scroll-trigger" href="#wordcloud">Word Clouds</a>
+              <a class="dropdown-item js-scroll-trigger" href="#chord">Chord</a>
+              <a class="dropdown-item js-scroll-trigger" href="#boxplot">Boxplot</a>
+              <a class="dropdown-item js-scroll-trigger" href="#textEnter">Check your source</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
@@ -71,7 +73,8 @@
         <div class="row">
           <div class="col-lg-6 mx-auto">
             <h1 class="brand-heading">You first.</h1>
-            <p class="intro-text">Have you ever wonder why Democrats and Republicans have so polirazed views on pretty much every aspect of social life? Do they even talk to each other?  That's what we are about to find out.
+            <p class="intro-text">Have you ever wonder why Democrats and Republicans have so polirazed views on pretty much every aspect of social
+              life? Do they even talk to each other? That's what we are about to find out.
               <br>Created by Captain Bouncy, the Rodneys, Boss & Co.</p>
             <a href="#about" class="btn btn-circle js-scroll-trigger">
               <i class="fa fa-angle-double-down animated"></i>
@@ -91,8 +94,13 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>About PuddleNet</h2>
-          <p>Our project will scrape 10 right-leaning and 10 left-leaning news sites to feed the content into a machine learning algorithm.  We hope to teach the machine through unsupervised, deep learning, and natural language processing to determine if a body of text is right or left leaning.  </p>
-          <p>Furthermore, as we create dimensions of data and extract features like date/time, title, text, authors, and keywords, we can begin to explore the data in new ways.  For example, we can see if a topic tended to have the right and left meet more in the middle, or if it made them polar opposites.  Viewing the same data, we can see if certain events led to bi-partisan alignment or if dates have an impact in general.</p>
+          <p>Our project will scrape 10 right-leaning and 10 left-leaning news sites to feed the content into a machine learning
+            algorithm. We hope to teach the machine through unsupervised, deep learning, and natural language processing
+            to determine if a body of text is right or left leaning. </p>
+          <p>Furthermore, as we create dimensions of data and extract features like date/time, title, text, authors, and keywords,
+            we can begin to explore the data in new ways. For example, we can see if a topic tended to have the right and
+            left meet more in the middle, or if it made them polar opposites. Viewing the same data, we can see if certain
+            events led to bi-partisan alignment or if dates have an impact in general.</p>
           <a href="#wordcloud" class="btn btn-circle js-scroll-trigger">
             <i class="fa fa-angle-double-down animated"></i>
           </a>
@@ -116,7 +124,7 @@
             <div class="container col-lg-6 col-md-8 col-sm-12">
               <p>Description here</p>
             </div>
-          </div>          
+          </div>
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-6">
               <form>
@@ -138,9 +146,9 @@
                 </div>
               </form>
             </div>
-          </div>          
-        </div>        
-      </div>      
+          </div>
+        </div>
+      </div>
     </div>
     <div class="container text-center">
       <a href="#chord" class="btn btn-circle-inv js-scroll-trigger">
@@ -150,18 +158,15 @@
   </section>
 
   <section id="chord" class="white-section">
-    <div class="container">
-      <div class="row">        
-        <div class="col-lg-4">
-          <h2>Chord</h2>
-          <p>Description here</p>
-        </div>      
-        <div class="col-lg-8">
-          <figure class='figure'>
-            <div id='chordChart'></div>
-            <figcaption class="figure-caption">Links to each other.</figcaption>
-          </figure>
-        </div>      
+    <div class="container-fluid">
+      <div class="col-sm-12 text-center">
+        <h2>Chord</h2>
+        <p>Description here</p>
+      </div>
+      <div class="row">
+        <div class="container col-sm-12 col-md-12 col-lg-12">
+          <div class="svg-container text-center" id='chordChart'></div>          
+        </div>
       </div>
     </div>
     <div class="container text-center">
@@ -172,28 +177,28 @@
   </section>
 
   <section id="boxplot" class="white-section">
-      <div class="container-fluid">
-          <div class="col-sm-12 text-center">
-            <h2>Boxplots</h2>
-            <p>Description here</p>
-          </div>
-        <div class="row">
-          <div class="col">
-            <div class="row">
-              <div class="container col-sm-12 col-md-12 col-lg-12">
-                <h3 class="text-center pt-5 pb-0">Left-leaning Media</h3>
-                <div class="svg-container pt-0" id="leftDiv"></div>
-              </div>
+    <div class="container-fluid">
+      <div class="col-sm-12 text-center">
+        <h2>Boxplots</h2>
+        <p>Description here</p>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="container col-sm-12 col-md-12 col-lg-12">
+              <h3 class="text-center pt-5 pb-0">Left-leaning Media</h3>
+              <div class="svg-container pt-0" id="leftDiv"></div>
             </div>
-            <div class="row">
-              <div class="container col-sm-12 col-md-12 col-lg-12">
-                <h3 class="text-center pt-5 pb-0">Right-leaning Media</h3>
-                <div class="svg-container pt-0" id="rightDiv"></div>
-              </div>
+          </div>
+          <div class="row">
+            <div class="container col-sm-12 col-md-12 col-lg-12">
+              <h3 class="text-center pt-5 pb-0">Right-leaning Media</h3>
+              <div class="svg-container pt-0" id="rightDiv"></div>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </section>
 
   <section class="content-section" id="textEnter">
@@ -213,7 +218,7 @@
               <a href="#team" class="btn btn-circle js-scroll-trigger">
                 <i class="fa fa-angle-double-down animated"></i>
               </a>
-            </div>            
+            </div>
           </div>
         </div>
       </div>
@@ -222,62 +227,77 @@
 
   <section id="team" class="white-section">
     <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="card w-100" style="width: 18rem;">
-              <img class="card-img-top" src="https://avatars0.githubusercontent.com/u/26147020?s=400&v=4" alt="Vanessa">
-              <div class="card-body">
-                <h5 class="card-title">Captain Bouncy</h5>
-                <p class="text-muted">aka Vanessa Van Gilder</p>
-                <p class="card-text">Lead Infringement Specialist at Funimation (A Sony Pictures Television Company)</p>
-                <a href="https://github.com/VanessaVanG" class="btn btn-primary" target="_blank"><i class="fa fa-github"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="card w-100" style="width: 18rem;">
-              <img class="card-img-top" src="https://avatars3.githubusercontent.com/u/35657984?s=400&v=4" alt="Spencer">
-              <div class="card-body">
-                <h5 class="card-title">The Rodneys</h5>
-                <p class="text-muted pt-0">aka Spencer Rand</p>
-                <p class="card-text">Asset Management Associate at Monument Wealth Management<br> <br> </p>
-                <a href="https://github.com/spencerrand" class="btn btn-primary" target="_blank"><i class="fa fa-github"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="card w-100" style="width: 18rem;">
-              <img class="card-img-top" src="https://avatars2.githubusercontent.com/u/10793093?s=400&v=4" alt="Mike">
-              <div class="card-body">
-                <h5 class="card-title">Boss</h5>
-                <p class="text-muted pt-0">aka Mike Hager</p>
-                <p class="card-text">Manager at Deloitte Consulting<br> <br> <br> </p> 
-                <a href="https://github.com/mhager3" class="btn btn-primary" target="_blank"><i class="fa fa-github"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="card w-100" style="width: 18rem;">
-              <img class="card-img-top" src="https://avatars1.githubusercontent.com/u/34144679?s=400&v=4" alt="Yegor">
-              <div class="card-body">
-                <h5 class="card-title">Co</h5>
-                <p class="text-muted pt-0">aka Yegor Kryukov</p>
-                <p class="card-text">E-commerce and data-oriented entrepreneur<br> <br> </p>
-                <a href="https://github.com/yegorkryukov" class="btn btn-primary" target="_blank"><i class="fa fa-github"></i></a>
-              </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card w-100" style="width: 18rem;">
+            <img class="card-img-top" src="https://avatars0.githubusercontent.com/u/26147020?s=400&v=4" alt="Vanessa">
+            <div class="card-body">
+              <h5 class="card-title">Captain Bouncy</h5>
+              <p class="text-muted">aka Vanessa Van Gilder</p>
+              <p class="card-text">Lead Infringement Specialist at Funimation (A Sony Pictures Television Company)</p>
+              <a href="https://github.com/VanessaVanG" class="btn btn-primary" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
             </div>
           </div>
         </div>
-        <div class="text-center container pt-5">
-            <a href="#page-top" class="btn btn-circle-inv js-scroll-trigger">
-              <i class="fa fa-angle-double-up animated"></i>
-            </a>
+        <div class="col-sm-3">
+          <div class="card w-100" style="width: 18rem;">
+            <img class="card-img-top" src="https://avatars3.githubusercontent.com/u/35657984?s=400&v=4" alt="Spencer">
+            <div class="card-body">
+              <h5 class="card-title">The Rodneys</h5>
+              <p class="text-muted pt-0">aka Spencer Rand</p>
+              <p class="card-text">Asset Management Associate at Monument Wealth Management
+                <br>
+                <br> </p>
+              <a href="https://github.com/spencerrand" class="btn btn-primary" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+            </div>
           </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card w-100" style="width: 18rem;">
+            <img class="card-img-top" src="https://avatars2.githubusercontent.com/u/10793093?s=400&v=4" alt="Mike">
+            <div class="card-body">
+              <h5 class="card-title">Boss</h5>
+              <p class="text-muted pt-0">aka Mike Hager</p>
+              <p class="card-text">Manager at Deloitte Consulting
+                <br>
+                <br>
+                <br> </p>
+              <a href="https://github.com/mhager3" class="btn btn-primary" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card w-100" style="width: 18rem;">
+            <img class="card-img-top" src="https://avatars1.githubusercontent.com/u/34144679?s=400&v=4" alt="Yegor">
+            <div class="card-body">
+              <h5 class="card-title">Co</h5>
+              <p class="text-muted pt-0">aka Yegor Kryukov</p>
+              <p class="card-text">E-commerce and data-oriented entrepreneur
+                <br>
+                <br> </p>
+              <a href="https://github.com/yegorkryukov" class="btn btn-primary" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center container pt-5">
+        <a href="#page-top" class="btn btn-circle-inv js-scroll-trigger">
+          <i class="fa fa-angle-double-up animated"></i>
+        </a>
+      </div>
     </div>
-</section>
-  
-  
-  
+  </section>
+
+
+
   <!-- Plotly library -->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
@@ -299,7 +319,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
   <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-  
+
   <!-- Plugin JavaScript -->
   <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
 

@@ -334,3 +334,9 @@ img::-moz-selection {
   outline: none;
   background: black;
 }
+
+#chordChart {
+	height:100%;
+	width:100%;
+	min-height:1000px;
+}

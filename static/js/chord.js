@@ -64,9 +64,9 @@ Plotly.d3.json("/chord", function(error, response) {
         "tick": { "visible": false },
         "item": { "visible": false },
         "label": {
-          "bold": true,
-          "font-size": "10px",
-          "font-family": "arial",
+          "bold": false,
+          "font-size": "24px",
+          "font-family": "helvetica",
           "angle": 90,
         }
       }
@@ -79,8 +79,8 @@ Plotly.d3.json("/chord", function(error, response) {
   zingchart.render({
     id: 'chordChart',
     data: myConfig,
-    height: 1000, 
-    width: 1000 
+    height: '100%', 
+    width: '100%' 
   });
 
 }); 
