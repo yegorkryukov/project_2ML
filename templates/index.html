@@ -73,9 +73,9 @@
         <div class="row">
           <div class="col-lg-6 mx-auto">
             <h1 class="brand-heading">You first.</h1>
-            <p class="intro-text">Have you ever wonder why Democrats and Republicans have so polirazed views on pretty much every aspect of social
-              life? Do they even talk to each other? That's what we are about to find out.
-              <br>Created by Captain Bouncy, the Rodneys, Boss & Co.</p>
+            <p class="intro-text">Have you ever wondered why Democrats and Republicans have such polarized views on every aspect of social life?
+              Do they even talk to each other? That's what we explore...
+            <p>Created by Captain Bouncy, the Rodneys, Boss &amp; Co.</p>
             <a href="#about" class="btn btn-circle js-scroll-trigger">
               <i class="fa fa-angle-double-down animated"></i>
             </a>
@@ -92,20 +92,20 @@
   <section id="about" class="content-section text-center">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class="col-lg-6 col-md-8 col-sm-12 mx-auto">
           <h2>About PuddleNet</h2>
-          <p>PuddleNet&mdash;it was to be our answer to a question we had not yet found. This project started with a desire
+          <p class="text-left">PuddleNet&mdash;it was to be our answer to a question we had not yet found. This project started with a desire
             to understand the political climate and the language being consumed by the masses. We wanted to be explorers
             of a polarized lexicon that seemed to be dividing this country.</p>
-          <p>As our project unfolded, we identified 20 sources from which to gather language. We chose an equal number of popular
+          <p class="text-left">As our project unfolded, we identified 20 sources from which to gather language. We chose an equal number of popular
             left- and right-leaning news media sites to scrape, and began our process of gathering human thought that has
             been recorded in sentences.</p>
-          <p>As the data began rolling in, millions of words per site, we needed to find a way to start making sense of it all.
+          <p class="text-left">As the data began rolling in, millions of words per site, we needed to find a way to start making sense of it all.
             We chose a two-pronged approach. First, we would begin grouping and inspecting to look for patterns, find relationships,
             further direct our exploration. Second, we we wanted a machine learning model to learn what left- or right-leaning
             text would look like so that we could use it to identify political leanings of a text, or even build text blocks
             with perspective.</p>
-          <p>And so we got to work...</p>
+          <p class="text-left">And so we got to work...</p>
           <a href="#wordcloud" class="btn btn-circle js-scroll-trigger">
             <i class="fa fa-angle-double-down animated"></i>
           </a>
@@ -119,8 +119,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
-          <h2 class="text-center">Wordcloud</h2>
-
+          <h2 class="text-center">Lexicography</h2>
           <div class="row">
             <div class="container col-lg-6 col-md-8 col-sm-12">
               <p>Word clouds are very subjective and require data cleaning in order to extract insights from them. It relies
@@ -163,7 +162,7 @@
       </div>
     </div>
     <div class="container text-center">
-      <a href="#chord" class="btn btn-circle-inv js-scroll-trigger">
+      <a href="#boxplot" class="btn btn-circle-inv js-scroll-trigger">
         <i class="fa fa-angle-double-down animated"></i>
       </a>
     </div>
@@ -173,8 +172,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="container">
-          <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
-            <h2 class="text-center">Boxplots</h2>
+          <div class="col-sm-12 col-md-8 col-lg-8 mx-auto">
+            <h2 class="text-center">Article Anatomy</h2>
             <p class="text-left">This simplest possible box plot displays the full range of variation (from min to max), the likely range of variation
               (first and third quartile), and a typical value (the median). Upper and Lower Fences help identify outliers
               in the data set. In short, the box plot provides a simple visual of the dimensions of the data.</p>
@@ -188,7 +187,6 @@
           </div>
         </div>
       </div>
-
       <div class="row">
         <div class="col">
           <div class="row">
@@ -205,13 +203,18 @@
           </div>
         </div>
       </div>
+      <div class="container text-center">
+        <a href="#chord" class="btn btn-circle-inv js-scroll-trigger">
+          <i class="fa fa-angle-double-down animated"></i>
+        </a>
+      </div>
     </div>
   </section>
 
   <section id="chord" class="white-section">
     <div class="container-fluid">
       <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
-        <h2 class="text-center">Chord</h2>
+        <h2 class="text-center">Crossing the Divide</h2>
         <p>A Chord plot is used to display the inter-relationships between data. It is arranged in a circle and arcs will show
           links to other sites, and the thickness of the link represents volume of interconnectedness.</p>
         <p>We went back to our raw data and began scouring the pages for links to external sites. This would show definitively
@@ -232,14 +235,9 @@
         </div>
       </div>
     </div>
-    <div class="container text-center">
-      <a href="#boxplot" class="btn btn-circle-inv js-scroll-trigger">
-        <i class="fa fa-angle-double-down animated"></i>
-      </a>
-    </div>
   </section>
 
-  <section class="white-section">
+  <section class="white-section" id="all-words">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
@@ -249,9 +247,29 @@
         </div>
       </div>
       <div class="row">
-        <div class="container col-lg-8 col-md-10 col-sm-12">
+        <div class="container col-lg-8 col-md-10 col-sm-12 pb-5">
           <img class="figure-img rounded img-big" src="{{ url_for('static', filename='img/AllCombined.png')}}">
         </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-10 col-lg-8 mx-auto pt-5">
+          <h1 class="text-center">Conclusion?</h1>
+          <p>Our exploration of the media lexicon has taught us 4 very important lessons:</p>
+          <ol>
+            <li>Starting the adventure without knowing the destination leads you to better discoveries than knowing where you
+              want to be, and hacking your way to the end.</li>
+            <li>When taken one at a time, the data is not that informative, but following the threads and stitching a story together
+              is better way to find truth, and not just a visualization</li>
+            <li>The truth that we found is: Short, hyper-focused, political, hot-button titles will dominate the media over structured,
+              logical, and factual argument and variety.</li>
+            <li>Machine Learning is utterly awesome, yet exceedingly difficult to master.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="container text-center">
+        <a href="#textEnter" class="btn btn-circle-inv js-scroll-trigger">
+          <i class="fa fa-angle-double-down animated"></i>
+        </a>
       </div>
     </div>
   </section>
