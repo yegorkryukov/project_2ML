@@ -94,13 +94,18 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>About PuddleNet</h2>
-          <p>Our project will scrape 10 right-leaning and 10 left-leaning news sites to feed the content into a machine learning
-            algorithm. We hope to teach the machine through unsupervised, deep learning, and natural language processing
-            to determine if a body of text is right or left leaning. </p>
-          <p>Furthermore, as we create dimensions of data and extract features like date/time, title, text, authors, and keywords,
-            we can begin to explore the data in new ways. For example, we can see if a topic tended to have the right and
-            left meet more in the middle, or if it made them polar opposites. Viewing the same data, we can see if certain
-            events led to bi-partisan alignment or if dates have an impact in general.</p>
+          <p>PuddleNet&mdash;it was to be our answer to a question we had not yet found. This project started with a desire
+            to understand the political climate and the language being consumed by the masses. We wanted to be explorers
+            of a polarized lexicon that seemed to be dividing this country.</p>
+          <p>As our project unfolded, we identified 20 sources from which to gather language. We chose an equal number of popular
+            left- and right-leaning news media sites to scrape, and began our process of gathering human thought that has
+            been recorded in sentences.</p>
+          <p>As the data began rolling in, millions of words per site, we needed to find a way to start making sense of it all.
+            We chose a two-pronged approach. First, we would begin grouping and inspecting to look for patterns, find relationships,
+            further direct our exploration. Second, we we wanted a machine learning model to learn what left- or right-leaning
+            text would look like so that we could use it to identify political leanings of a text, or even build text blocks
+            with perspective.</p>
+          <p>And so we got to work...</p>
           <a href="#wordcloud" class="btn btn-circle js-scroll-trigger">
             <i class="fa fa-angle-double-down animated"></i>
           </a>
@@ -115,14 +120,21 @@
       <div class="row">
         <div class="col-sm-12">
           <h2 class="text-center">Wordcloud</h2>
+
           <div class="row">
             <div class="container col-lg-6 col-md-8 col-sm-12">
-              <img class="figure-img rounded img-big" src="{{ url_for('static', filename='img/AllCombined.png')}}">
-            </div>
-          </div>
-          <div class="row">
-            <div class="container col-lg-6 col-md-8 col-sm-12">
-              <p>Description here</p>
+              <p>Word clouds are very subjective and require data cleaning in order to extract insights from them. It relies
+                heavily on the human brain to identify patterns and/or relationships. In its simplest form, the more frequent
+                words are illustrated with bigger size in the cloud. Common grammar words are typically removed so "THE"
+                does not steal the show.</p>
+              <p>In looking at the individual word clouds (select from drop downs), we began inspecting the language. We began
+                to have an inkling that there was definitely something different between the lexicons used by each side.
+                However, we were unable to put a finger on it. We then rolled the word clouds up into groups of left and
+                right, and the pattern began to take shape.</p>
+              <p>The Conservative Lexicon seemed to be a little more focused on political terms, whereas the Liberal Lexicon
+                almost seemed a little erratic.</p>
+              <p>This was surprising. So, we needed to explore the anatomy of the articles&hellip;
+              </p>
             </div>
           </div>
           <div class="row">
@@ -157,31 +169,26 @@
     </div>
   </section>
 
-  <section id="chord" class="white-section">
-    <div class="container-fluid">
-      <div class="col-sm-12 text-center">
-        <h2>Chord</h2>
-        <p>Description here</p>
-      </div>
-      <div class="row">
-        <div class="container col-sm-12 col-md-12 col-lg-12">
-          <div class="svg-container text-center" id='chordChart'></div>          
-        </div>
-      </div>
-    </div>
-    <div class="container text-center">
-      <a href="#boxplot" class="btn btn-circle-inv js-scroll-trigger">
-        <i class="fa fa-angle-double-down animated"></i>
-      </a>
-    </div>
-  </section>
-
   <section id="boxplot" class="white-section">
     <div class="container-fluid">
-      <div class="col-sm-12 text-center">
-        <h2>Boxplots</h2>
-        <p>Description here</p>
+      <div class="row">
+        <div class="container">
+          <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
+            <h2 class="text-center">Boxplots</h2>
+            <p class="text-left">This simplest possible box plot displays the full range of variation (from min to max), the likely range of variation
+              (first and third quartile), and a typical value (the median). Upper and Lower Fences help identify outliers
+              in the data set. In short, the box plot provides a simple visual of the dimensions of the data.</p>
+            <p class="text-left">Our box plots were very insightful. We noticed almost immediately that the article anatomies were very different.
+              Liberal media tended to have longer articles by nearly twice as many words, on average, than the Conservative
+              Media. This began to explain some of the disparity between the word clouds, but we simply needed more information.</p>
+            <p class="text-left">We wanted to explore why longer articles that clearly had more information, seemed to not be heard as loudly
+              in the political arena.</p>
+            <p class="text-left">And so we looked for a way to visualize the interconnectedness of the sites, to see if there was a proportionate
+              flow between the sides...</p>
+          </div>
+        </div>
       </div>
+
       <div class="row">
         <div class="col">
           <div class="row">
@@ -196,6 +203,54 @@
               <div class="svg-container pt-0" id="rightDiv"></div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="chord" class="white-section">
+    <div class="container-fluid">
+      <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
+        <h2 class="text-center">Chord</h2>
+        <p>A Chord plot is used to display the inter-relationships between data. It is arranged in a circle and arcs will show
+          links to other sites, and the thickness of the link represents volume of interconnectedness.</p>
+        <p>We went back to our raw data and began scouring the pages for links to external sites. This would show definitively
+          how frequently the sites referred to each other, and if the sites crossed the political chasm seemingly between
+          the sides.</p>
+        <p>We found there is a chasm. The left and right do not tend to share. This was not too surprising, though still disappointing.
+        </p>
+        <p>However, we did find what we call &ldquo;hub&rdquo; sites. Only three seemed to cross the divide heavily, and in
+          both directions.</p>
+        <p>So, there we were, looking at all but insulated sides, and we noticed there simply was more volume on the liberal
+          side, they wrote longer articles, and they covered more topics of interest&hellip; </p>
+        <p>At this point, our assumption would be the liberal media should be dominating the political ecosphere. </p>
+        <p>This was discordant with what we see everyday, so we went back to the data&hellip;</p>
+      </div>
+      <div class="row">
+        <div class="container col-sm-12 col-md-12 col-lg-12">
+          <div class="svg-container text-center" id='chordChart'></div>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center">
+      <a href="#boxplot" class="btn btn-circle-inv js-scroll-trigger">
+        <i class="fa fa-angle-double-down animated"></i>
+      </a>
+    </div>
+  </section>
+
+  <section class="white-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
+          <p>This cloud spanned both sides of the stage. It clearly shows it is more similar to the Conservative Word Cloud
+            than it is to the Liberal Word Cloud. Despite what we discovered, the volume and quality of the Left, the Right-Leaning
+            media was dominating the space.&nbsp;</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container col-lg-8 col-md-10 col-sm-12">
+          <img class="figure-img rounded img-big" src="{{ url_for('static', filename='img/AllCombined.png')}}">
         </div>
       </div>
     </div>

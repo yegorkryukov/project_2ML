@@ -65,7 +65,7 @@ Plotly.d3.json("/chord", function(error, response) {
         "item": { "visible": false },
         "label": {
           "bold": false,
-          "font-size": "24px",
+          "font-size": "16px",
           "font-family": "helvetica",
           "angle": 90,
         }
