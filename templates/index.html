@@ -75,10 +75,10 @@
             <h1 class="brand-heading">You first.</h1>
             <p class="intro-text">Have you ever wondered why Democrats and Republicans have such polarized views on every aspect of social life?
               Do they even talk to each other? That's what we explore...
-            <p>Created by Captain Bouncy, the Rodneys, Boss &amp; Co.</p>
-            <a href="#about" class="btn btn-circle js-scroll-trigger">
-              <i class="fa fa-angle-double-down animated"></i>
-            </a>
+              <p>Created by Captain Bouncy, the Rodneys, Boss &amp; Co.</p>
+              <a href="#about" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
           </div>
           <!-- <div class="col-lg-6 mx-auto">
             <img src="http://media.nj.com/hudson_voices_impact/photo/firstjpg-e58a5d80f7e01bfc.jpg">
@@ -116,12 +116,12 @@
 
   <!-- Plots Section -->
   <section id='wordcloud' class='white-section'>
-    <div class="container-fluid">
+    <div class="container mx-auto">
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-lg-6 col-md-8 col-sm-12 mx-auto">
           <h2 class="text-center">Lexicography</h2>
           <div class="row">
-            <div class="container col-lg-6 col-md-8 col-sm-12">
+            <div >
               <p>Word clouds are very subjective and require data cleaning in order to extract insights from them. It relies
                 heavily on the human brain to identify patterns and/or relationships. In its simplest form, the more frequent
                 words are illustrated with bigger size in the cloud. Common grammar words are typically removed so "THE"
@@ -136,31 +136,35 @@
               </p>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <form>
-                <div class="form-group">
-                  <select class="form-control" id="first-cloud" onchange="firstOptionChanged(this.value)"></select>
-                </div>
-                <div class="form-group text-center">
-                  <figure class="figure" id="first-image"></figure>
-                </div>
-              </form>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <form>
-                <div class="form-group">
-                  <select class="form-control" id="second-cloud" onchange="secondOptionChanged(this.value)"></select>
-                </div>
-                <div class="form-group text-center">
-                  <figure class="figure" id="second-image"></figure>
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
       </div>
     </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <form>
+            <div class="form-group">
+              <select class="form-control" id="first-cloud" onchange="firstOptionChanged(this.value)"></select>
+            </div>
+            <div class="form-group text-center">
+              <figure class="figure" id="first-image"></figure>
+            </div>
+          </form>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <form>
+            <div class="form-group">
+              <select class="form-control" id="second-cloud" onchange="secondOptionChanged(this.value)"></select>
+            </div>
+            <div class="form-group text-center">
+              <figure class="figure" id="second-image"></figure>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  
     <div class="container text-center">
       <a href="#boxplot" class="btn btn-circle-inv js-scroll-trigger">
         <i class="fa fa-angle-double-down animated"></i>
